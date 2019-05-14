@@ -9,6 +9,9 @@ tags:
 - install
 ---
 
+* content
+{:toc}
+
 > ### 玄学至上
 
 周六晚给别人装Ubuntu，不得不说这台笔记本电脑太狗血了，我给他装debian,ubuntu,deepin都能正常安装但是 重启 登陆 后就没反应。。。。。。。。

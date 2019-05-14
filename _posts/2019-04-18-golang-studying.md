@@ -2,11 +2,14 @@
 layout: post
 title: "Go-Studying"
 date: 2019-04-18
-author: duckduckk
+author: jjnoob
 category: 2019-04
 tags: web
 finished: true
 ---
+
+* content
+{:toc}
 
 > golang......wenku.....
 

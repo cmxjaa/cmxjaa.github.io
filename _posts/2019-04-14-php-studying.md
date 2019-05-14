@@ -2,11 +2,14 @@
 layout: post
 title: "PHP-Studying"
 date: 2019-04-14
-author: duckduckk
+author: jjnoob
 category: 2019-04
 tags: web
 finished: true
 ---
+
+* content
+{:toc}
 
 > 刷了bugku几题, 发现要用PHP....于是过来简单看看, 熟悉基本语法
 

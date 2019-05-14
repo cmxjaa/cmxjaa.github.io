@@ -2,7 +2,7 @@
 layout: post
 title: "HTML-Studying"
 date: 2019-03-30
-author: duckduckk
+author: jjnoob
 category: 2019-03
 tags: web
 finished: true

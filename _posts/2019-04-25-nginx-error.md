@@ -8,6 +8,9 @@ tags: nginx
 finished: true
 ---
 
+* content
+{:toc}
+
 > 希望能把nginx的报错都总结起来.
 
 # 一. 报错, 忘了, nginx is not active之类的.

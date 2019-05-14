@@ -2,7 +2,7 @@
 layout: post
 title: "XHTML"
 date: 2019-03-31
-author: duckduckk
+author: jjnoob
 category: 2019-03
 tags: web
 finished: true

@@ -2,11 +2,14 @@
 layout: post
 title: "JS 实例"
 date: 2019-04-08
-author: duckduckk
+author: jjnoob
 category: 2019-04
 tags: web
 finished: true
 ---
+
+* content
+{:toc}
 
 > js-example, 看完这一部分就去看 MySQL和 SQLite
 

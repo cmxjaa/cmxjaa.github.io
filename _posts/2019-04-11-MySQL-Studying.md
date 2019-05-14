@@ -2,11 +2,14 @@
 layout: post
 title: "MySQL-Studying"
 date: 2019-04-11
-author: duckduckk
+author: jjnoob
 category: 2019-04
 tags: web
 finished: true
 ---
+
+* content
+{:toc}
 
 > MySQL数据库.
 

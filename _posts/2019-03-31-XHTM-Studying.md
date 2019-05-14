@@ -8,6 +8,9 @@ tags: web
 finished: true
 ---
 
+* content
+{:toc}
+
 [参考w3school-XHTML](http://www.w3school.com.cn/html/html_xhtml.asp)
 
 # 一, XHTML 简介

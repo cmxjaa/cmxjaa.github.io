@@ -2,7 +2,7 @@
 layout: post
 title: "CSS-Studying"
 date: 2019-04-02
-author: duckduckk
+author: jjnoob
 category: 2019-04
 tags: web
 finished: true

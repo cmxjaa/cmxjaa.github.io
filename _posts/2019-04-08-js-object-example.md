@@ -2,11 +2,14 @@
 layout: post
 title: "JS Object 实例"
 date: 2019-04-08
-author: duckduckk
+author: jjnoob
 category: 2019-04
 tags: web
 finished: true
 ---
+
+* content
+{:toc}
 
 > 前几天看完了js的大体内容, 现在看一些实例来巩固一下, 不然就像当初看python一样, 看完就忘了.
 

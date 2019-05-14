@@ -2,11 +2,14 @@
 layout: post
 title: "JavaScript-Stuying"
 date: 2019-04-04
-author: duckduckk
+author: jjnoob
 category: 2019-04
 tags: web
 finished: true
 ---
+
+* content
+{:toc}
 
 > 从4.3号下午开始看, 一直看到现在--4.4号凌晨两点. 我该睡了...头发要紧...
 

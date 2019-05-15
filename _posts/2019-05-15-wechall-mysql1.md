@@ -27,7 +27,7 @@ passowrd: anyone
 # 源码
 
 ```sql
-# TABLE STRUCTURE
+/* TABLE STRUCTURE */
 CREATE TABLE IF NOT EXISTS users (
 userid    INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 username  VARCHAR(32) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,

@@ -157,7 +157,7 @@ or 1=1 –
 * 判断方式:
 
 ```sql
-"SELECT * FROM users WHERE username='$username' AND password='$password'";
+SELECT * FROM users WHERE username='$username' AND password='$password';
 ```
 
 * 而且有admin这个用户的特判

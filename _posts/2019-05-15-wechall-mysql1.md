@@ -155,9 +155,11 @@ or 1=1 –
 
 ## 源码
 * 判断方式:
+
 ```sql
 "SELECT * FROM users WHERE username='$username' AND password='$password'";
 ```
+
 * 而且有admin这个用户的特判
 
 ## 注入:

@@ -6,7 +6,7 @@ author: jjnoob
 categories:
 - 2019-05
 tags:
-- 
+- ctf
 ---
 
 * content

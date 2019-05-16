@@ -159,6 +159,8 @@ select * from table where id='$id';
 
 # 四. 元数据库
 [参考](https://blog.csdn.net/linyt/article/details/52966555)
+
+
 MySQL数据有一个元数据库, 描述整个MySQL服务器有哪些数据库, 每个数据有哪些表, 每个表有哪些字段.
 
 ## (1) 查看所有数据库
@@ -192,6 +194,9 @@ SELECT * FROM 数据库名.表名
 <br />
 
 # 五. UNION
+[参考](https://blog.csdn.net/linyt/article/details/52966555)
+
+
 > 一种注入方式.
 
 

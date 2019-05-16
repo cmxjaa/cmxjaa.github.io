@@ -14,10 +14,13 @@ tags:
 
 > sql注入的学习. 看别人的writeup, 积累.
 
+
 [参考 leehaming](https://blog.csdn.net/lee_ham/article/details/77185049)
 
 
 # Wechall - Training: MySQL I (MySQL, Exploit, Training)
+[题目链接](http://www.wechall.net/challenge/training/mysql/auth_bypass1/index.php)
+
 
 ```
 username: admin' or '1'='1

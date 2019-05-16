@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "sql注入-studying1"
+title: "sqli-studying1"
 date: 2019-05-15
 author: jjnoob
 categories:

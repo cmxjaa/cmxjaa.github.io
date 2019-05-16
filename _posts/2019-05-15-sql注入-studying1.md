@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "wechall-mysql 1"
+title: "sql注入-studying1"
 date: 2019-05-15
 author: jjnoob
 categories:

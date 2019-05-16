@@ -155,3 +155,61 @@ select * from table where id='$id';
 1'/**/union/**/select/**/flag/**/from/**/flag/**/where/**/'1'='1
 ```
 
+<br />
+
+# 四. 元数据库
+[参考](https://blog.csdn.net/linyt/article/details/52966555)
+MySQL数据有一个元数据库, 描述整个MySQL服务器有哪些数据库, 每个数据有哪些表, 每个表有哪些字段.
+
+## (1) 查看所有数据库
+1. MySQL里有数据库`information_schema`, 就是元数据库.
+2. 元数据库里有`SCHEMATA`, 他描述了整个MySQL下所有的数据库.
+    从该表查看所有的数据库:
+    ```sql
+    SELECT * FROM information_schema.SCHEMATA
+    ```
+3. 从这里开始不再是进入某个数据库之后再访问表，而是采用`<数据库名>.<表名>`的标准格式来访问某个数据库下的表. 上述的`information_schema.SCHEMATA`表示查询`information_schema`数据库下的`SCHEMATA`表.
+4. `SCHEMA_NAME`字段为数据库名
+
+
+## (2) 查看表
+```sql
+SELECT TABLE_SCHEMA, TABLE_NAME FROM information_schema.TABLES WHERE TABLE_SCHEMA = '数据库名'
+```
+`TABLE_SCHEMA`为数据库名; `TABLE_NAME`表示表名.
+
+## (3) 查看表中的所有字段
+使用`COLUMNS表`可以查询表的所有字段信息, 查询某表的所有字段名和类型
+```sql 
+SELECT TABLE_NAME, COLUMN_NAME, DATA_TYPE FROM information_schema.COLUMNS WHERE TABLE_NAME = '表名'
+```
+
+## (4) 查看表中的所有记录
+```sql
+SELECT * FROM 数据库名.表名
+```
+
+<br />
+
+# 五. UNION
+> 一种注入方式.
+
+
+标准SQL提供了UNION语句，可以将两个SELECT结果联合起来(即对两个SELECT结果作并集)
+```sql
+SELECT column_name1(s) FROM table_name1
+UNION
+SELECT column_name2(s) FROM table_name2
+```
+唯一的要求就是两个SELECT语句的列数要相等。
+
+可以通过尝试得到查询结果的列数:
+```sql
+select * from userinfo union select 1;
+```
+报错, 可知列数不为1.
+```sql
+select * from userinfo union select 2;
+```
+得到正确结果, 可知列数为2.
+

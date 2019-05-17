@@ -92,3 +92,37 @@ index.php?vote_for=bill`=111-- `
 ```
 即可.
 
+<br />
+
+# 三. 宽字节注入
+[参考](http://www.manongjc.com/article/79150.html)
+
+[参考](https://www.leavesongs.com/PENETRATION/mutibyte-sql-inject.html)
+
+
+
+```sql
+$id = isset($_GET['id']) ? addslashes($_GET['id']) : 1;
+$sql = "SELECT * FROM news WHERE tid='{$id}'";
+$result = mysql_query($sql, $conn) or die(mysql_error()); 
+```
+addslashes函数, 用于将`$id`的值转义. 
+
+addslashes函数产生的效果就是，让`'`变成`\'`, 让引号变得不再是"单引号", 只是一撇而已。一般绕过方式就是，想办法处理`\'`前面的`\`：
+
+1. 想办法给`\`前面再加一个`\`, 变成`\\'`, 这样`\`被转义了，`'`逃出了限制
+2. 想办法把`\`弄没有。
+
+宽字节注入是利用mysql的一个特性，mysql在使用GBK编码的时候，会认为两个字符是一个汉字(前一个ascii码要大于128，才到汉字的范围). 
+
+> mysql 在使用GBK 编码的时候，会认为两个字符为一个汉字，例如`%aa%5c` 就是一个汉字(前一个ascii 码大于128 才能到汉字的范围)
+
+
+所以输入`%df'`时会报错了。我们看到报错，说明sql语句出错，看到出错说明可以注入.
+
+报错的原因就是多了一个单引号, 而单引号前面的反斜杠不见了。
+
+这就是mysql的特性，因为gbk是多字节编码，他认为两个字节代表一个汉字，所以`%df`和后面的`\`也就是`%5c`变成了一个汉字`運'，而`'`逃逸了出来。
+
+不使用'%df`也行, 只要ascii码大于128，基本上就可以了. 比如用`%a1`也可以.
+

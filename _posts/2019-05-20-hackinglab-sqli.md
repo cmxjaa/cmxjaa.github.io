@@ -31,10 +31,14 @@ username=admin' or 1=1
 password=123456
 ```
 
+<br />
+
 # 二. 熟悉注入环境
 1. 提示需要登陆, 登陆后, 再打开原题目链接, 只有两行字.
 2. 只有两行字却做成php, 而不是做成静态页面html.
 3. url后加 `?id=1 or 1=1`
+
+<br />
 
 # 三. 防注入
 ## (1) 判断
@@ -78,6 +82,8 @@ password=123456
 ```php
 ?id=2%bf' union select 1,2,(select group_concat(title_1,content_1) from sae_user_sqli4) %23
 ```
+
+<br />
 
 # 四. limit注入
 MySQL在MySQL5.x版本, limit配合 `procedure`函数和 `INTO`函数 进行注入. `INTO`除非有写入shell的权限，否则是无法利用的. 而MySQL默认只有`analyse()`与`procedure`搭配.
@@ -154,6 +160,8 @@ MySQL在MySQL5.x版本, limit配合 `procedure`函数和 `INTO`函数 进行注�
 start=1 procedure analyse(extractvalue(rand(),concat(0x3a,(select password from user where username=0x666c6167))),1)%23 &num=1 %23
 ```
 
+<br />
+
 # 五. 邂逅
 
 > firefox浏览器出了问题, 我还以为是burpsuite除了问题. 卸了重装就好. 
@@ -212,6 +220,7 @@ pic中有3条记录
 
 地址栏访问第三张图片, 得到flag.
 
+<br />
 
 # 六. ErrorBased
 [参考](https://www.waitalone.cn/mysql-error-based-injection.html)
@@ -274,6 +283,8 @@ key:
 notfound!
 ```
 
+<br />
+
 # 七. 盲注
 测试:
 ```
@@ -288,11 +299,14 @@ username=admin%27 and sleep(10)%23
 
 > sqlmap过段时间会学习, 这里先跳过, 事情做多了容易乱.
 
+<br />
+
 # 八. SQL注入通用防护
 注入有3种，post方式，get方式，cookie注入. cookie注入严格算post注入的一种.
 
 > 不会写, cookie注入没学过, sqlmap不会用...
 
+<br />
 
 # 九. 据说哈希后的密码是不能产生注入的
 ## 源码:
@@ -310,7 +324,7 @@ select * from user where userid=".intval($_GET['userid'])." and password='".md5(
 > FALSE  32 字符十六进制数 (默认)
 
 
-# 注入
+## 注入
 
 思路:
 当md5后的hex转换成字符串后，如果包含 `'or'xxxx `这样的字符串，那整个sql变成

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "sqlmap实战体验"
+title: "sqlmap-learning1"
 date: 2019-05-20
 author: jjnoob
 categories:

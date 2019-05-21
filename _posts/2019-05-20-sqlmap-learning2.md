@@ -18,7 +18,7 @@ tags:
 > 实验吧的题目总是连接失败......
 
 
-题目[实验吧-简单的sql注入之2](http://www.shiyanbar.com/ctf/1908)
+题目: [实验吧-简单的sql注入之2](http://www.shiyanbar.com/ctf/1908)
 
 这道题目之前手工注入过.
 
@@ -27,7 +27,8 @@ tags:
 
 因为有空格过滤, 所以使用sqlmap的时候得想办法绕过. 
 
-参考这篇文章
+参考这篇文章:
+
 [sqlmap的tamper详解](http://www.myh0st.cn/index.php/archives/881/)
 
 可知在`tamper`中:
@@ -64,6 +65,7 @@ sqlmap.py -r "C:\Users\18056\Desktop\44.txt" -p id --current-db
 ```
 
 `-r`: 加载一个文件 
+
 `-p`: 指定参数 (这里是`id`, 原解题网址输入45的时候用burp抓包, 会发现返回`id=45`)
 
 

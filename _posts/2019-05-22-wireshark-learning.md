@@ -18,7 +18,7 @@ tags:
 
 [参考-远有青山](https://blog.csdn.net/holandstone/article/details/47026213)
 
-wireshark版本: win64-3.0.0汉化本
+wireshark版本: win64-3.0.0汉化版
 
 
 # 一. 背景

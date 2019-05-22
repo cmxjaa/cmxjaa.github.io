@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "cookie-injections-sqlmap"
-date: 2019-05-20
+date: 2019-05-21
 author: jjnoob
 categories:
 - 2019-05

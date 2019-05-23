@@ -123,3 +123,99 @@ username=admin&pwd§=admin§&vcode=&submit=submit
 
 步骤与第五题一样, 爆破得到key.
 
+<br />
+
+# 七. 逗比的验证码第三期（SESSION）
+加入了 session 验证，把 cookies 的内容删掉就好.
+
+> 由于HTTP协议是无状态的协议，所以服务端需要记录用户的状态时，就需要用某种机制来识具体的用户，这个机制就是Session.
+
+修改部分:
+```
+Cookie: PHPSESSID=
+
+
+username=admin&pwd=§admin§&vcode=&submit=submit
+```
+
+剩下步骤和前两题一样, 用burp爆破.
+
+<br />
+
+# 八. 微笑一下就能过关了
+[参考](https://blog.csdn.net/qq_26090065/article/details/82503651)
+
+[参考](https://www.waitalone.cn/security-scripts-game.html)
+
+## (1) 源码
+查看源码, 观察发现:
+```html
+<form name="login" action="index.php" method="POST" accept-charset="utf-8"> 
+    <ul> 
+        <li> 
+            <label for="SMILE">请使用微笑过关<a href="?view-source">源代码</a></label> 
+            <input type="text" name="T_T" placeholder="where is your smile" required> 
+        </li> 
+        <li><input type="submit" value="Show"> </li> 
+    </ul> 
+</form> 
+```
+
+地址栏访问:`?view-source`. 得到php源码.
+```php
+<?php  
+    header("Content-type: text/html; charset=utf-8");
+    if (isset($_GET['view-source'])) { 
+        show_source(__FILE__); 
+        exit(); 
+    } 
+ 
+    include('flag.php'); 
+ 
+    $smile = 1;  
+ 
+   if (!isset ($_GET['^_^'])) $smile = 0;  
+    if (preg_match ('/\./', $_GET['^_^'])) $smile = 0;  
+    if (preg_match ('/%/', $_GET['^_^'])) $smile = 0;  
+    if (preg_match ('/[0-9]/', $_GET['^_^'])) $smile = 0;  
+    if (preg_match ('/http/', $_GET['^_^']) ) $smile = 0;  
+    if (preg_match ('/https/', $_GET['^_^']) ) $smile = 0;  
+    if (preg_match ('/ftp/', $_GET['^_^'])) $smile = 0;  
+    if (preg_match ('/telnet/', $_GET['^_^'])) $smile = 0;  
+    if (preg_match ('/_/', $_SERVER['QUERY_STRING'])) $smile = 0; 
+    if ($smile) { 
+        if (@file_exists ($_GET['^_^'])) $smile = 0;  
+    }  
+    if ($smile) { 
+        $smile = @file_get_contents ($_GET['^_^']);  
+        if ($smile === "(●'◡'●)") die($flag);  
+    }  
+?>
+```
+
+## (2) 需要满足条件
+发现需要满足的条件有:
+
+1. 必须对`^_^`赋值
+2. `^_^`的值不能有  `.`  `%`  `[0-9]`  `http`  `https`  `ftp`  `telnet`  这些东西
+3. `$_SERVER['QUERY_STRING']`,即`^_^=(输入的值)`这个字符串不能有`_` 这个字符
+4. 满足`$smile!=0`
+5. `file_exists ($_GET['^_^'])`必须为0.也就是`$_GET['^_^']`此文件不存在
+6. `$smile`必须等于`(●'◡'●)`.也就是`file_get_contents($_GET['^_^'])`必须为`(●'◡'●)`
+
+
+## (3) 矛盾与解决
+### 逻辑矛盾处:
+1. `QUREY_STRING`过滤了`_`但是`$_GET[‘^_^’]`又含有`_`.
+2. `file_exists`需要寻找的文件必须不存在, 但`file_get_contents却能读取到文件内容.
+
+
+### 分析
+1. 可以采用Url编码变为`%5f`. 这样第3点就满足了. 所以我们输入就应该为`^%5f^`
+2. `file_get_contents`可以获取远程数据, 但常用网络协议已经被正则过滤, 因此需要选取其他协议. 而在php支持的协议和包装中, `RFC 2397`的`data`协议可用. 并且, `file_exists`对于`data`指向内容判断为不存在.
+
+
+
+最后构造: `^%5f^=data:,(●'◡'●)`, 即url输入`?^%5f^=data:,(●'◡'●)`. 即可以得到flag.
+
+

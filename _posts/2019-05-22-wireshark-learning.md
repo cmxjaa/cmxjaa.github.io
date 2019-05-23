@@ -68,7 +68,7 @@ wireshark版本: win64-3.0.0汉化版
 
 `tcp.port ==80`  端口为80的
 
-`tcp.srcport == 80`  只显示TCP协议的愿端口为80的
+`tcp.srcport == 80`  只显示TCP协议的源端口为80的
 
 ## (4) Http模式过滤
 

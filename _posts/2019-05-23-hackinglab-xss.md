@@ -218,4 +218,11 @@ username=admin&pwd=§admin§&vcode=&submit=submit
 
 最后构造: `^%5f^=data:,(●'◡'●)`, 即url输入`?^%5f^=data:,(●'◡'●)`. 即可以得到flag.
 
+<br />
+
+# 九.逗比的手机验证码
+跟着步骤来就行. 注意获得验证码并返回后, 不仅要填写验证码也要修改手机号.
+
+
+<br />
 

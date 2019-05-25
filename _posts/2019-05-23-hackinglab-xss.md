@@ -283,7 +283,7 @@ chrome有`xss 过滤器`功能. 要么关闭, 要么用firefox.
 1. 打开`console`，输入`alert(HackingLab)`即可.
 2. 用`hackbar`, 已经收费了.....跳过.
 
-> hackbar 另一个版本, 不收费! [hackbar-for-firefox](https://addons.mozilla.org/en-US/firefox/addon/hackbar-for-firefox-57/)
+> hackbar 另一个版本, 不收费! [hackbar-for-firefox-57](https://addons.mozilla.org/en-US/firefox/addon/hackbar-for-firefox-57/)
 
 
 

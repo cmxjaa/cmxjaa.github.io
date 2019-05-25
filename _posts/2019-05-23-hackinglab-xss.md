@@ -223,6 +223,67 @@ username=admin&pwd=§admin§&vcode=&submit=submit
 # 九.逗比的手机验证码
 跟着步骤来就行. 注意获得验证码并返回后, 不仅要填写验证码也要修改手机号.
 
+<br />
+
+
+# 十. 基情燃烧的岁月
+1. 先爆破验证码, 爆破成功后可以得到一个新的手机号
+2. 输入新的手机号, 随意填写一个验证码, 抓包, 再爆破验证码.(一开始我在这一步用上一步爆破成功的验证码, 结果这一步爆破失败了, 所以这里的验证码随便填就好)
+3. 得到的flag记得去掉大括号`{}`.
 
 <br />
+
+# 十一. 验证码识别
+谷歌了一下, 没有解决出来, 为不影响进度, 跳过.
+
+
+* 可以用Python识别验证码
+* 也可以用`pkavhttpfuzzer`这款工具
+
+> 有时间研究一下python识别验证码. mark一下, 防止忘记.
+
+<br />
+
+# 十二. XSS基础关
+根据源码: 能`alert(HackingLab)`就能拿key. 同理后面几题可以发现都是这个意思.
+> 没看懂源码...
+
+
+没有过滤. 输入框中输入: `<script>alert(HackingLab)</script>`即可.
+
+chrome有`xss 过滤器`功能. 要么关闭, 要么用firefox.
+
+<br />
+
+# 十三. XSS基础2:简单绕过
+`<img src="#" onerror=alert(HackingLab) />`
+或者`<img src=1 onerror=alert(HackingLab)>`都一样.
+
+> 我怎么感觉现在才到了正常的xss
+
+<br />
+
+# 十四. XSS基础3:检测与构造
+> 没怎么仔细研究xss
+
+尝试可以发现:
+* 过滤了`<`, 没有过滤`>`.
+* 输入`<script></script>`会提示检测到xss, 所以不能用.
+* 输入`hello'hello`, 看似`'`被过滤了, 查看源码会发现并没有被过滤.
+
+`'`去闭合input框value的单引号:
+`alert(hahaha)' onclick=alert(HackingLab)>`
+
+> `onclick`是绑定事件，告诉浏览器在鼠标点击时候要做什么
+
+<br />
+
+# 十五. Principle很重要的XSS
+两种方法:
+1. 打开`console`，输入`alert(HackingLab)`即可.
+2. 用`hackbar`, 已经收费了.....跳过.
+
+> hackbar 另一个版本, 不收费! [hackbar-for-firefox](https://addons.mozilla.org/en-US/firefox/addon/hackbar-for-firefox-57/)
+
+
 

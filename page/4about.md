@@ -9,9 +9,8 @@ type: page
 * content
 {:toc}
 
-菜鸟
-  
-漫漫长夜, 经历狂喜与绝望, 我跌跌撞撞, 一路奔跑.
+
+The road you choose, active or passive.
   
   
 ## Mail

@@ -20,7 +20,7 @@ type: page
 
 不可复追
 
-[![ZijdzR.jpg](https://s2.ax1x.com/2019/06/23/ZijdzR.jpg)](https://imgchr.com/i/ZijdzR)
+[![ZijdzR.md.jpg](https://s2.ax1x.com/2019/06/23/ZijdzR.md.jpg)](https://imgchr.com/i/ZijdzR)
 
 
 The road you choose, active or passive.

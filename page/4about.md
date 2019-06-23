@@ -21,8 +21,6 @@ type: page
 
 不可复追
 
-[![ZijdzR.th.jpg](https://s2.ax1x.com/2019/06/23/ZijdzR.th.jpg)](https://imgchr.com/i/ZijdzR)
-
 
   
   

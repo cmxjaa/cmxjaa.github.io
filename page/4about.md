@@ -10,7 +10,7 @@ type: page
 {:toc}
 
 
-The road you choose, active or passive.
+事在人为.
 
 
   

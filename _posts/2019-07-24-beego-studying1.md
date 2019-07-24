@@ -1,3 +1,19 @@
+---
+layout: post
+title: "beego学习"
+date: 2019-07-24
+author: jjnoob
+categories:
+- 2019-07
+tags:
+- beego
+- golang
+---
+
+* content
+{:toc}
+
+
 > 慢慢积累吧.
 
 [项目代码](https://github.com/beego/samples/tree/master/todo)

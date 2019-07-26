@@ -14,7 +14,7 @@ tags:
 {:toc}
 
 
-> 哇地一声
+> 照着别人的代码一点一点的看, 一点一点的敲. 
 
 
 [参考-wujiangwei](https://studygolang.com/user/wujiangwei/articles)

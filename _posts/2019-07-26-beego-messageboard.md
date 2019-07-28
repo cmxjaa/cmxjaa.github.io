@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "beego-message"
+title: "beego-messageboard"
 date: 2019-07-26
 author: jjnoob
 categories:

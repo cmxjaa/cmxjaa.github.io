@@ -13,12 +13,18 @@ type: page
 事在人为.
 
 
+## Nav
+---------------------------------------------
+| 邮箱   | ruilin1024@outlook.com           |
+---------------------------------------------
+| 博客   | https://jjnoob.top               |
+---------------------------------------------
+| GitHub | https://github.com/duckduckk     | 
+---------------------------------------------
+
+
   
-  
-## Mail
-  
-<a href="mailto:ruilin1024@outlook.com?subject=Hello%20again">ruilin1024@outlook.com</a>
-  
+
 ## Links
 
 [My github](https://github.com/duckduckk)

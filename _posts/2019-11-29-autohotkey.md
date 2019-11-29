@@ -36,3 +36,5 @@ Return
 ```
 
 保存, 双击运行该脚本即可.
+
+开机自启: 将脚本放入: `C:\Users\username\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup`中即可.

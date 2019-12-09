@@ -9,7 +9,7 @@
 title: jjnoob
 brief-intro: 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://duckduckk.github.io" # the base hostname & protocol for your site
+url: "https://isjjnoob.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 

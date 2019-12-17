@@ -37,3 +37,5 @@ type: page
 [建成学长](https://icbtbo.github.io)
 
 [长航学长](https://www.sail.name/)
+
+[智龙](https://xunzhanggzl.github.io/)

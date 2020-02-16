@@ -20,7 +20,7 @@ type: page
 ---------------------------------------------
 | 博客   | https://jjnoob.top               |
 ---------------------------------------------
-| GitHub | https://github.com/duckduckk     | 
+| GitHub | https://github.com/isjjnoob      | 
 ---------------------------------------------
 ```
 

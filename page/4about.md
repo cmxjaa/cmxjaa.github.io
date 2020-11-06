@@ -16,7 +16,7 @@ type: page
 ## Nav
 ```
 ---------------------------------------------
-| 邮箱   | jjnoobchen@gmail.com             |
+| 邮箱   | Y214amFh(B6)@gmail.com           |
 ---------------------------------------------
 | 博客   | https://jjnoob.top               |
 ---------------------------------------------
@@ -28,7 +28,7 @@ type: page
 
 ## Links
 
-[My github](https://github.com/duckduckk)
+[My github](https://github.com/isjjnoob)
   
 [FlyingStudio](https://blog.atcumt.com/)
   

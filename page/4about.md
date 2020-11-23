@@ -20,7 +20,7 @@ type: page
 ---------------------------------------------
 | 博客   | https://jjnoob.top               |
 ---------------------------------------------
-| GitHub | https://github.com/isjjnoob      | 
+| GitHub | https://github.com/jjnoob        | 
 ---------------------------------------------
 ```
 
@@ -28,7 +28,7 @@ type: page
 
 ## Links
 
-[My github](https://github.com/isjjnoob)
+[My github](https://github.com/jjnoob)
   
 [FlyingStudio](https://blog.atcumt.com/)
   

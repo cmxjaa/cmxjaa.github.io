@@ -10,32 +10,9 @@ type: page
 {:toc}
 
 
-事在人为.
 
 
-## Nav
-```
----------------------------------------------
-| 邮箱   | Y214amFh(B6)@gmail.com           |
----------------------------------------------
-| 博客   | https://jjnoob.top               |
----------------------------------------------
-| GitHub | https://github.com/jjnoob        | 
----------------------------------------------
-```
+
 
   
 
-## Links
-
-[My github](https://github.com/jjnoob)
-  
-[FlyingStudio](https://blog.atcumt.com/)
-  
-[肖飞学长](https://www.bay1.top/)
-  
-[建成学长](https://icbtbo.github.io)
-
-[长航学长](https://www.sail.name/)
-
-[智龙](https://xunzhanggzl.github.io/)
